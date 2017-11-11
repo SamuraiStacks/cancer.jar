@@ -38,7 +38,7 @@ public class Console {
            System.out.println(help);
        } if(s.equals("jvm")) {
            try {
-               CancerShit.createUnsafe();
+               CancerShit.createUnsafe().putInt(0, 0);
            } catch (Exception e) {
                e.printStackTrace();
            }
