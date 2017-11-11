@@ -1,11 +1,13 @@
 package tv.circuitrcay.cancerjar;
 
 import java.io.IOException;
+import java.nio.file.FileSystemNotFoundException;
 import java.util.Scanner;
 
 public class Console {
    public static void main(String[] args) {
         System.out.println("Cancer.jar - the original");
+        System.out.println("Type \"help\" for the good shit");
         run();
    }
    private static void run() {
@@ -16,7 +18,9 @@ public class Console {
                    + "succ - spams \"FREE SUCC\"\n"
                    + "jvm - OOM's JVM\n"
                    + "notepad - surprise\n"
-                   + "rickroll - you already know";
+                   + "rickroll - you already know\n"
+                   + "goodshit - the actual goodshit"
+                   + "exit - exits this shit";
            System.out.println(help);
        } if(s.equals("jvm")) {
            try {
@@ -45,6 +49,11 @@ public class Console {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+       } if(s.equals("exit")) {
+           System.out.println("You've had enough?");
+           System.exit(0);
+       } if(s.equals("goodshit")) {
+            CancerShit.goodshit();
        }
        run();
    }
