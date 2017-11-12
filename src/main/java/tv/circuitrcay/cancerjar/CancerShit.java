@@ -53,4 +53,12 @@ public class CancerShit {
         Runtime runtime = Runtime.getRuntime();
         Process process = runtime.exec("chrome http://dvorak.org/blog/images/GhostlyCarAd.wmv");
     }
+    
+    //Added by Memes#2545
+    public static void descripton() {
+        for(int i=0; i<1000000; i++) {
+            System.out.println("THIS IS THE MOST CANCEROUS JAR EVER!");
+        }
+    }
+    
 }
