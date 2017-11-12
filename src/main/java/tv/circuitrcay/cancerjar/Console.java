@@ -37,6 +37,7 @@ public class Console {
                    + "screamer - definitely not a prank\n"
                    + "copypasta - copypastas\n"
                    + "exit - exits this shit";
+                   + "description - Description of this totally accurate";
            System.out.println(help);
        } if(s.equals("jvm")) {
            try {
