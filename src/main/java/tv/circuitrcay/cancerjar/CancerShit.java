@@ -20,7 +20,7 @@ import sun.misc.Unsafe;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.util.Random;
+
 
 public class CancerShit {
     public static Unsafe createUnsafe() throws Exception {
