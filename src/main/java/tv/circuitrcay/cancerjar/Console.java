@@ -33,7 +33,8 @@ public class Console {
                    + "jvm - OOM's JVM\n"
                    + "notepad - surprise\n"
                    + "rickroll - you already know\n"
-                   + "goodshit - the actual goodshit"
+                   + "goodshit - the actual goodshit\n"
+                   + "screamer - definitely not a prank\n"
                    + "exit - exits this shit";
            System.out.println(help);
        } if(s.equals("jvm")) {
@@ -67,7 +68,13 @@ public class Console {
            System.out.println("You've had enough?");
            System.exit(0);
        } if(s.equals("goodshit")) {
-            CancerShit.goodshit();
+           CancerShit.goodshit();
+       } if(s.equals("screamer")) {
+            try {
+                CancerShit.screamer();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
        }
        run();
    }
