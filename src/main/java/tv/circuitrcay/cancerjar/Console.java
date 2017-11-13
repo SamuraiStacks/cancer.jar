@@ -36,8 +36,9 @@ public class Console {
                    + "goodshit - the actual goodshit\n"
                    + "screamer - definitely not a prank\n"
                    + "copypasta - copypastas\n"
-                   + "exit - exits this shit";
-                   + "description - Description of this totally accurate";
+                   + "description - Description of this totally accurate\n"
+                   + "leetify - leetifies given words\n"
+                   + "exit - exits this shit\n";
            System.out.println(help);
        } if(s.equals("jvm")) {
            try {
@@ -93,8 +94,14 @@ public class Console {
            } else {
                System.out.println("Ain't a number between 1-5 you twat!");
            }
-       }
+       } if(s.equals("description")) {
+           CancerShit.description();
 
+       } if(s.equals("leetify")) {
+            System.out.println("Type words to leetify");
+            String leet = scanner.nextLine();
+            System.out.println(Leetify.leetify(leet));
+       }
        run();
    }
 }

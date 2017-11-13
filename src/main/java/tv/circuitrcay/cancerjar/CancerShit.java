@@ -55,10 +55,9 @@ public class CancerShit {
     }
     
     //Added by Memes#2545
-    public static void descripton() {
+    public static void description() {
         for(int i=0; i<1000000; i++) {
             System.out.println("THIS IS THE MOST CANCEROUS JAR EVER!");
         }
     }
-    
 }
