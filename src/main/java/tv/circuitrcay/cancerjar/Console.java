@@ -17,6 +17,7 @@ package tv.circuitrcay.cancerjar;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Console {
    public static void main(String[] args) {
@@ -59,6 +60,7 @@ public class Console {
                    + "Natan#1289 - the idea of the \"jvm\" command \n"
                    + "Kodehawa#3457 - extended idea of the \"notepad\" command \n"
                    + "Skweezi Leekz#2426 - the idea of the \"succ\" command \n"
+                   + "Memes#"
                    + "Github: https://github.com/weirddogdev/cancer.jar";
            System.out.println(credits);
        } if(s.equals("rickroll")) {
@@ -101,6 +103,21 @@ public class Console {
             System.out.println("Type words to leetify");
             String leet = scanner.nextLine();
             System.out.println(Leetify.leetify(leet));
+       } if(s.equals("spinner")) {
+           try {
+               long spintime = (long) Math.floor(Math.random() * (300000 - 30000)) + 30000;
+               Thread.sleep(TimeUnit.SECONDS.toMillis(spintime));
+               System.out.println("You have spun your spinner for " + spintime + " seconds.");
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+       } if(s.equals("wew")) {
+           try {
+               Runtime runtime = Runtime.getRuntime();
+               Process p = runtime.exec("chrome https://myanimelist.com/profile/computerfreaker");
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
        }
        run();
    }

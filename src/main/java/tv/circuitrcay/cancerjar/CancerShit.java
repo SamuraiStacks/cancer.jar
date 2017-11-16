@@ -21,6 +21,8 @@ import sun.misc.Unsafe;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 
+import static java.lang.Thread.sleep;
+
 
 public class CancerShit {
     public static Unsafe createUnsafe() throws Exception {
@@ -60,4 +62,5 @@ public class CancerShit {
             System.out.println("THIS IS THE MOST CANCEROUS JAR EVER!");
         }
     }
+
 }
