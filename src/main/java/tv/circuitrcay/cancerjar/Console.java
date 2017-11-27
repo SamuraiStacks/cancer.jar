@@ -15,8 +15,8 @@
  */
 package tv.circuitrcay.cancerjar;
 
+
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Console {
@@ -25,100 +25,84 @@ public class Console {
         System.out.println("Type \"help\" for the good shit");
         run();
    }
-   private static void run() {
-       Scanner scanner = new Scanner(System.in);
-       String s = scanner.nextLine();
-       if(s.equals("help")) {
-           String help = "All the cancerous commands:\n"
-                   + "succ - spams \"FREE SUCC\"\n"
-                   + "jvm - crashes JVM\n"
-                   + "notepad - surprise\n"
-                   + "rickroll - you already know\n"
-                   + "goodshit - the actual goodshit\n"
-                   + "screamer - definitely not a prank\n"
-                   + "copypasta - copypastas\n"
-                   + "description - Description of this totally accurate\n"
-                   + "leetify - leetifies given words\n"
-                   + "exit - exits this shit\n";
-           System.out.println(help);
-       } if(s.equals("jvm")) {
-           try {
-               CancerShit.createUnsafe().putInt(0, 0);
-           } catch (Exception e) {
-               e.printStackTrace();
-           }
-       } if(s.equals("succ")) {
-           CancerShit.spamSucc();
-       } if (s.equals("notepad")) {
-           try {
-               CancerShit.notepad();
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
-       } if(s.equals("credits")) {
-           String credits = "Credits go to: \n"
-                   + "Natan#1289 - the idea of the \"jvm\" command \n"
-                   + "Kodehawa#3457 - extended idea of the \"notepad\" command \n"
-                   + "Skweezi Leekz#2426 - the idea of the \"succ\" command \n"
-                   + "Memes#"
-                   + "Github: https://github.com/weirddogdev/cancer.jar";
-           System.out.println(credits);
-       } if(s.equals("rickroll")) {
-            try {
-                CancerShit.rickroll();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-       } if(s.equals("exit")) {
-           System.out.println("You've had enough?");
-           System.exit(0);
-       } if(s.equals("goodshit")) {
-           CancerShit.goodshit();
-       } if(s.equals("screamer")) {
-            try {
-                CancerShit.screamer();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-       } if(s.equals("copypasta")) {
-           System.out.println("Pick a number between 1-5");
-           int is = scanner.nextInt();
-           if(is == 1) {
-               System.out.println("Hello am 48 year man from somalia. Sorry for my bed england. I selled my wife for internet connection for play \"conter stirk and i want to become the goodest player like you I play with 400 ping on brazil server and i am Global elite 2. pls no copy pasterino my story.");
-           } else if(is == 2) {
-               System.out.println("“wtf his ult did like 3k damage how is that legit” – leonardo da vinci 1496, founder of the Illuminati");
-           } else if(is == 3) {
-               System.out.println("Hello twitch chat. This is michaels mother speaking. Please stop the spam in the chat. I can’t read the amazing conversations that you are having about my son. Thanks. Don’t copy and paste this to spam more or I will tell Michael to ban you all.");
-           } else if(is == 4) {
-               System.out.println("I sexually Identify as an Attack Helicopter. Ever since I was a boy I dreamed of soaring over the oilfields dropping hot sticky loads on disgusting foreigners. People say to me that a person being a helicopter is Impossible and I’m fucking retarded but I don’t care, I’m beautiful. I’m having a plastic surgeon install rotary blades, 30 mm cannons and AMG-114 Hellfire missiles on my body. From now on I want you guys to call me “Apache” and respect my right to kill from above and kill needlessly. If you can’t accept me you’re a heliphobe and need to check your vehicle privilege. Thank you for being so understanding.");
-           } else if(is == 5) {
-               System.out.println("Gr8 b8, m8. I rel8, str8 appreci8, and congratul8. I r8 this b8 an 8/8. Plz no h8, I’m str8 ir8. Cre8 more, can’t w8. We should convers8, I won’t ber8, my number is 8888888, ask for N8. No calls l8 or out of st8. If on a d8, ask K8 to loc8. Even with a full pl8, I always have time to communic8 so don’t hesit8");
-           } else {
-               System.out.println("Ain't a number between 1-5 you twat!");
-           }
-       } if(s.equals("description")) {
-           CancerShit.description();
+   private static void run(String... args) {
+       switch(args[0].toLowerCase()) {
+           case "help":
+               String help = "All the cancerous commands:\n"
+                       + "succ - spams \"FREE SUCC\"\n"
+                       + "jvm - crashes JVM\n"
+                       + "notepad - surprise\n"
+                       + "rickroll - you already know\n"
+                       + "goodshit - the actual goodshit\n"
+                       + "screamer - definitely not a prank\n"
+                       + "copypasta - copypastas\n"
+                       + "description - Description of this totally accurate\n"
+                       + "leetify - leetifies given words\n"
+                       + "exit - exits this shit\n";
+               System.out.println(help);
+               break;
+           case "jvm":
+               try {
+                   CancerShit.createUnsafe().putInt(0, 0);
+               } catch (Exception e) {
+                   e.printStackTrace();
+               }
+               break;
+           case "succ":
+               CancerShit.spamSucc();
+               break;
+           case "notepad":
+               try {
+                   CancerShit.notepad();
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+               break;
+           case "goodshit":
+               CancerShit.goodshit();
+           case "copypasta":
+               if(args[1] == "1") {
+                   System.out.println("Hello am 48 year man from somalia. Sorry for my bed england. I selled my wife for internet connection for play \"conter stirk and i want to become the goodest player like you I play with 400 ping on brazil server and i am Global elite 2. pls no copy pasterino my story.");
+               } else if(args[1] == "2") {
+                   System.out.println("“wtf his ult did like 3k damage how is that legit” – leonardo da vinci 1496, founder of the Illuminati");
+               } else if(args[1] == "3") {
+                   System.out.println("Hello twitch chat. This is michaels mother speaking. Please stop the spam in the chat. I can’t read the amazing conversations that you are having about my son. Thanks. Don’t copy and paste this to spam more or I will tell Michael to ban you all.");
+               } else if(args[1] == "4") {
+                   System.out.println("I sexually Identify as an Attack Helicopter. Ever since I was a boy I dreamed of soaring over the oilfields dropping hot sticky loads on disgusting foreigners. People say to me that a person being a helicopter is Impossible and I’m fucking retarded but I don’t care, I’m beautiful. I’m having a plastic surgeon install rotary blades, 30 mm cannons and AMG-114 Hellfire missiles on my body. From now on I want you guys to call me “Apache” and respect my right to kill from above and kill needlessly. If you can’t accept me you’re a heliphobe and need to check your vehicle privilege. Thank you for being so understanding.");
+               } else if(args[1] == "5") {
+                   System.out.println("Gr8 b8, m8. I rel8, str8 appreci8, and congratul8. I r8 this b8 an 8/8. Plz no h8, I’m str8 ir8. Cre8 more, can’t w8. We should convers8, I won’t ber8, my number is 8888888, ask for N8. No calls l8 or out of st8. If on a d8, ask K8 to loc8. Even with a full pl8, I always have time to communic8 so don’t hesit8");
+               } else {
+                   System.out.println("Ain't a number between 1-5 you twat!");
+                   break;
+               }
+           case "description":
+               CancerShit.description();
+               break;
+           case "leetify":
+               if (args[1] != null) {
+                   Leetify.leetify(args[1]);
+               } else {
+                   System.out.println("Provide arguments for this command");
+               }
+               break;
+           case "spinner":
+               try {
+                   long spintime = (long) Math.floor(Math.random() * (300000 - 30000)) + 30000;
+                   Thread.sleep(TimeUnit.SECONDS.toMillis(spintime));
+                   System.out.println("You have spun your spinner for " + spintime + " seconds.");
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+               break;
+           case "wew":
+               try {
+                   Runtime runtime = Runtime.getRuntime();
+                   Process p = runtime.exec("chrome https://myanimelist.com/profile/computerfreaker");
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+           
 
-       } if(s.equals("leetify")) {
-            System.out.println("Type words to leetify");
-            String leet = scanner.nextLine();
-            System.out.println(Leetify.leetify(leet));
-       } if(s.equals("spinner")) {
-           try {
-               long spintime = (long) Math.floor(Math.random() * (300000 - 30000)) + 30000;
-               Thread.sleep(TimeUnit.SECONDS.toMillis(spintime));
-               System.out.println("You have spun your spinner for " + spintime + " seconds.");
-           } catch (InterruptedException e) {
-               e.printStackTrace();
-           }
-       } if(s.equals("wew")) {
-           try {
-               Runtime runtime = Runtime.getRuntime();
-               Process p = runtime.exec("chrome https://myanimelist.com/profile/computerfreaker");
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
        }
-       run();
    }
 }
