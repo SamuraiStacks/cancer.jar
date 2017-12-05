@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class Console {
    public static void main(String[] args) {
         System.out.println("Cancer.jar - the original");
-        System.out.println("Type \"help\" for the good shit");
+        System.out.println("Type \"help\" to experience cringe");
         run();
    }
    private static void run(String... args) {
@@ -72,7 +72,7 @@ public class Console {
                } else if(args[1] == "5") {
                    System.out.println("Gr8 b8, m8. I rel8, str8 appreci8, and congratul8. I r8 this b8 an 8/8. Plz no h8, I’m str8 ir8. Cre8 more, can’t w8. We should convers8, I won’t ber8, my number is 8888888, ask for N8. No calls l8 or out of st8. If on a d8, ask K8 to loc8. Even with a full pl8, I always have time to communic8 so don’t hesit8");
                } else {
-                   System.out.println("Ain't a number between 1-5 you twat!");
+                   System.out.println("Ain't a number between 1-5 you stuped!");
                    break;
                }
            case "description":
@@ -89,7 +89,7 @@ public class Console {
                try {
                    long spintime = (long) Math.floor(Math.random() * (300000 - 30000)) + 30000;
                    Thread.sleep(TimeUnit.SECONDS.toMillis(spintime));
-                   System.out.println("You have spun your spinner for " + spintime + " seconds.");
+                   System.out.println("You have spun your spinner for " + spintime + " seconds. Have fun with death.");
                } catch (InterruptedException e) {
                    e.printStackTrace();
                }
